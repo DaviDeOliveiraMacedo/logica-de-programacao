@@ -11,11 +11,15 @@ function adicionar() {
     const optionSelecionado = select.value;
     let vetorDescricaoValor = optionSelecionado.split('-');
 
-    let desc = vetorDescricaoValor[0]
-    let vl = vetorDescricaoValor[1]
+    let desc = vetorDescricaoValor[0];
+    let vl = vetorDescricaoValor[1];
+    let textoEstilizado =  `<span class="texto-azul">${qtd}x</span> ${desc} <span class="texto-azul">${vl} </span><span class="texto-azul">${qtd}x</span> ${desc} <span class="texto-azul">${vl}</span>`;
 
-    (optionSelecionado.split('-'))
     
+
+   let documento = document.getElementById("lista-produtos");
+   let inserir = ((optionSelecionado.split('-')));
+   documento.innerHTML = textoEstilizado;
 
   //alert(valorSelecionado);
 
